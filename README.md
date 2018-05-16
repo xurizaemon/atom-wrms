@@ -4,12 +4,16 @@ Primarily a WRMS timesheet plugin for Atom.
 
 ## TODO
 
-* Highlighting for .tks files
+* Generate a .tks template, like tks -t (date)
+* Syntax highlighting for .tks files
+ * Day header highlight
+ * Column highlight
+ * Soften comments
+ * Warning highlight for invalid lines
 * Submit .tks files to WRMS via node-wrms
-* Preview timesheet hours per day
-*
+* Calculate total timesheet hours per day (in header?)
 
 ## References
 
 * https://blog.github.com/2016-08-19-building-your-first-atom-plugin/
-* 
+* Git merge conflict UI is quite nice
