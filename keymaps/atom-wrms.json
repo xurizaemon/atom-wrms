@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "atom-wrms:toggle"
+    "ctrl-alt-o": "atom-wrms:fetchBrief"
   }
 }

@@ -1,18 +1,19 @@
 {
   "name": "atom-wrms",
   "main": "./lib/atom-wrms",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "0.0.1",
+  "description": "WRMS integration for Atom",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "WRMS:reverse"
+    "atom-workspace": "WRMS:fetchBrief"
   },
-  "repository": "https://github.com/atom/atom-wrms",
+  "repository": "https://github.com/xurizaemon/atom-wrms",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "wrms": "^0.0.1"
   }
 }

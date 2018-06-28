@@ -12,6 +12,7 @@ Primarily a WRMS timesheet plugin for Atom.
  * Warning highlight for invalid lines
 * Submit .tks files to WRMS via node-wrms
 * Calculate total timesheet hours per day (in header?)
+* Sort by WR ID, then comment, then hours
 
 ## References
 

@@ -1,0 +1,27 @@
+{
+  "endpoint": {
+    "type": "string",
+    "description": "WRMS API URL.",
+    "default": "https://wrms.example.org",
+    "order": 1
+  },
+  "username": {
+    "type": "string",
+    "description": "WRMS username",
+    "default": "",
+    "order": 2
+  },
+  "password": {
+    "type": "string",
+    "description": "WRMS password",
+    "default": "",
+    "order": 3
+  },
+  "additionalCookies": {
+    "type": "string",
+    "title": "Additional Cookies",
+    "description": "Some WRMS APIs require additional WRMS v2 cookies ... mmm. Not strictly required.",
+    "default": "",
+    "order": 4
+  }
+}
