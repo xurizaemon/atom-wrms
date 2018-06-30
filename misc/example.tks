@@ -1,0 +1,20 @@
+# An example TKS file.
+
+2018-06-25 # Monday
+277853  0.25    Personal user stuff
+291606  8       Working on a thing
+
+2018-06-26 # Tuesday
+287177  0.25    Personal user stuff
+291606  8       Working on a thing
+6       0.5     A short WR item
+
+2018-06-27
+291010    2     Work item with review flag [Review]
+# 291010  1     Commented work item
+
+2018-06-28 # Thursday
+#  Day mentioned only; no entries
+
+2018-06-29 # Friday
+#  Day mentioned only; no entries

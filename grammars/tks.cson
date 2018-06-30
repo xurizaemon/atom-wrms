@@ -1,0 +1,93 @@
+# https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+# /usr/share/tks/vim/syntax/tks.vim
+#
+# tks.vim has these names:
+# - tksWR
+# - tksTime
+# - tksDescription
+# - tksReviewFlag
+#
+# we also want:
+# - tksRedmine (similar to tksReviewFlag, [RM#1234])
+scopeName: 'tks' # <scope> should be a short, unique indicator for the language ("js", "php", "c", etc.)
+name: 'WRMS Timekeeping' # The title that will show up in grammar selection and on your status bar.
+fileTypes: [ # An array of file extensions.
+  'tks'
+]
+# firstLineMatch: '' # A regular expression that is matched against the first line of the document when Atom is trying to decide if the grammar is appropriate. Useful for shell scripts, mostly.
+foldingStartMarker: '^20[0-9]{2}-[0-9]{2}-[0-9]{2}\b' # A regular expression that checks for the start of a foldable area (such as `{`).
+foldingStopMarker: '\n\n' # A regular expression that checks for the end of a foldable area (such as `}`). If both folding markers are matched in the same line, there will be no foldable area.
+patterns: [ # An array of individual pattern declarations.
+  {
+    match: '^([0-9]+)(\\b([0-9\\.]+))?(\\b([^#]+))?'
+    name: 'tks-sample-row-2'
+    captures:
+      0:
+        name: ''
+      1:
+        name: 'm2-wr-id'
+      2:
+        name: 'm2-2'
+      3:
+        name: 'm2-3'
+      4:
+        name: 'm2-4'
+      5:
+        name: 'm2-5'
+      6:
+        name: 'm2-6'
+  }
+  {
+    match: '291606  8       Work on a thing'
+    name: 'tks-sample-row'
+    captures:
+      0:
+        name: 'everything'
+  }
+  {
+    match: '^[0-9]+(\b+)?([0-9\.]+)?(\b+)([^#]*)' # A regular expression that matches some content. Optional.
+    # begin: '' # A regular expression that precedes the content. Optional.
+    # end: '' # A regular expression that follows the content. Optional.
+    name: 'tks-row' # A period-delimited list of classes that will be applied to the content identified by `match`. Optional.
+    # contentName: '' # A period-delimited list of classes that will be applied to the content within `begin` and `end`. Optional.
+    captures: # An array of `name` designations for `match` expressions that capture multiple bits. Optional.
+      0: # Arrays start at zero. This one will catch the whole regex. 1+ will catch the capture groups.
+        name: '' # This should be self-explanatory by now.
+      1: # The WR id
+        name: 'wr-id'
+      2:
+        name: 'ws'
+      3:
+        name: 'hours'
+      4:
+        name: 'ws'
+      5:
+        name: 'description'
+    # beginCaptures: # An array of `name` designations for `begin` expressions that capture multiple bits. Optional.
+    #   0:
+    #     name: ''
+    # endCaptures: # An array of `name` designations for `end` expressions that capture multiple bits. Optional.
+    #   0:
+    #     name: ''
+    # include: '' # This can be a reference to another grammar (by scope name), the current grammar (with `$self`), or a rule from the grammar's repository (with `#<rule>`). Optional.
+    # patterns: [] # This is where you can get tricky. When you have matched content, Atom will search within it for anything in the child array. You can have `patterns[]` within `patterns[]`, then throw an `include` in to jump to some other rule or refer back to the root of the grammar. If you are making a rule that captures a block that might contain other tags, you should refer back to the root. Optional, naturally.
+  }
+  {
+    match: '^20[0-9]{2}-[0-9]{2}-[0-9]{2}\b *(#.*)?$'
+    name: 'tks-date'
+  }
+  {
+    match: '\#.*'
+    name: 'comment.line.pound.tks'
+  }
+]
+# repository: # An array of rules. If you're going to be referencing one bit of code over and over again, stick it here so that you can edit all in one place.
+#   ruleName: # Can be anything.
+#     {
+#       name: ''
+#       match: ''
+#       end: ''
+#       endCaptures:
+#         0:
+#           name: ''
+#     }

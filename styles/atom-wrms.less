@@ -4,5 +4,38 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.atom-wrms {
+atom-text-editor {
+  border: 1px solid red;
+  &.editor {
+    border: 1px solid green;
+    .syntax--source {
+      border: 1px solid yellow;
+      .syntax--tks {
+        border: 1px solid pink;
+        .syntax--tks-sample-row-2 {
+          text-decoration: underline;
+        }
+        .syntax--meta {
+          &.syntax--minute {
+            color: @ui-site-color-5;
+          }
+          &.syntax--hour {
+            color: @ui-site-color-2;
+          }
+          &.syntax--dayofmonth {
+            color: @ui-site-color-3;
+          }
+          &.syntax--month {
+            color: @ui-site-color-1;
+          }
+          &.syntax--dayofweek {
+            color: @ui-site-color-4;
+          }
+          &.syntax--constant {
+            color: @ui-site-color-5;
+          }
+        }
+      }
+    }
+  }
 }
