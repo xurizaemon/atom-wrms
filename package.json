@@ -15,5 +15,8 @@
   },
   "dependencies": {
     "wrms": "^0.0.1"
-  }
+  },
+  "styles": [
+    "styles/language-tks.less"
+  ]
 }
