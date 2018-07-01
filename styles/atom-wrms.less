@@ -5,36 +5,26 @@
 @import "ui-variables";
 
 atom-text-editor {
-  border: 1px solid red;
   &.editor {
-    border: 1px solid green;
-    .syntax--source {
-      border: 1px solid yellow;
-      .syntax--tks {
-        border: 1px solid pink;
-        .syntax--tks-sample-row-2 {
-          text-decoration: underline;
+    .syntax--tks {
+      .syntax--tks-timesheet-row {
+        // border: 1px solid red;
+        .syntax--tks-wr {
+          color: @ui-site-color-1;
         }
-        .syntax--meta {
-          &.syntax--minute {
-            color: @ui-site-color-5;
-          }
-          &.syntax--hour {
-            color: @ui-site-color-2;
-          }
-          &.syntax--dayofmonth {
-            color: @ui-site-color-3;
-          }
-          &.syntax--month {
-            color: @ui-site-color-1;
-          }
-          &.syntax--dayofweek {
-            color: @ui-site-color-4;
-          }
-          &.syntax--constant {
-            color: @ui-site-color-5;
-          }
+        .syntax--tks-wr {
+          color: @ui-site-color-1;
         }
+        .syntax--tks-time {
+          color: @ui-site-color-2;
+        }
+        .syntax--tks-description {
+          color: @ui-site-color-3;
+        }
+      }
+      .syntax--tks-date-row {
+        font-weight: 700;
+        color: @ui-site-color-4;
       }
     }
   }

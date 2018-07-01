@@ -15,12 +15,12 @@ fileTypes: [ # An array of file extensions.
   'tks'
 ]
 # firstLineMatch: '' # A regular expression that is matched against the first line of the document when Atom is trying to decide if the grammar is appropriate. Useful for shell scripts, mostly.
-foldingStartMarker: '^20[0-9]{2}-[0-9]{2}-[0-9]{2}\b' # A regular expression that checks for the start of a foldable area (such as `{`).
-foldingStopMarker: '\n\n' # A regular expression that checks for the end of a foldable area (such as `}`). If both folding markers are matched in the same line, there will be no foldable area.
+# foldingStartMarker: '^\\d\\d\\d\\d-\\d\\d-\\d\\d' # A regular expression that checks for the start of a foldable area (such as `{`).
+# foldingStopMarker: '^$' # A regular expression that checks for the end of a foldable area (such as `}`). If both folding markers are matched in the same line, there will be no foldable area.
 patterns: [ # An array of individual pattern declarations.
   {
-    match: '^([0-9]+)(\\b([0-9\\.]+))?(\\b([^#]+))?'
-    name: 'tks-sample-row-2'
+    match: '^\\d\\d\\d\\d-\\d\\d-\\d\\d'
+    name: 'tks-date-row'
     captures:
       0:
         name: ''
@@ -36,6 +36,17 @@ patterns: [ # An array of individual pattern declarations.
         name: 'm2-5'
       6:
         name: 'm2-6'
+  }
+  {
+    match: '^([0-9]+)([\\W]+)?([0-9\\.]+)?([\\W]+)?(\\w[^#]*)?(#.*)?$'
+    name: 'tks-timesheet-row'
+    captures:
+      1:
+        name: 'tks-wr'
+      3:
+        name: 'tks-time'
+      5:
+        name: 'tks-description'
   }
   {
     match: '291606  8       Work on a thing'

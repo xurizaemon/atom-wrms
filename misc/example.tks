@@ -1,7 +1,7 @@
 # An example TKS file.
 
 2018-06-25 # Monday
-277853  0.25    Personal user stuff
+277853  0.25    Personal user stuff # and a comment
 291606  8       Working on a thing
 
 2018-06-26 # Tuesday
