@@ -5,9 +5,6 @@
   "description": "WRMS integration for Atom",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "WRMS:fetchBrief"
-  },
   "repository": "https://github.com/xurizaemon/atom-wrms",
   "license": "MIT",
   "engines": {
@@ -15,8 +12,5 @@
   },
   "dependencies": {
     "wrms": "^0.0.1"
-  },
-  "styles": [
-    "styles/language-tks.less"
-  ]
+  }
 }
