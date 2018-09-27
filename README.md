@@ -2,6 +2,8 @@
 
 Primarily a WRMS timesheet plugin for Atom.
 
+![example.png](misc/example.png)
+
 ## TODO
 
 * Generate a .tks template, like tks -t (date)
@@ -21,6 +23,7 @@ Primarily a WRMS timesheet plugin for Atom.
 * Interface: get this week's timesheet
 * Interface: send to today's entries in week's timesheet
 * Interface: most common tickets (eg quick phone calls)
+* [leesdolphin/language-tks](https://github.com/leesdolphin/language-tks) talk to Opal
 
 ## References
 
