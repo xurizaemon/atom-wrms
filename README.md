@@ -2,6 +2,8 @@
 
 Primarily a WRMS timesheet plugin for Atom.
 
+I'll be honest - this isn't *much* better than [what you'll see in vim](misc/vim-example.png) out of the box on a Catalyst laptop ... yet 😉
+
 ![example.png](misc/example.png)
 
 ## TODO
