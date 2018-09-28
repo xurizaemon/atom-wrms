@@ -19,23 +19,19 @@ fileTypes: [ # An array of file extensions.
 # foldingStopMarker: '^$' # A regular expression that checks for the end of a foldable area (such as `}`). If both folding markers are matched in the same line, there will be no foldable area.
 patterns: [ # An array of individual pattern declarations.
   {
-    match: '^\\d\\d\\d\\d-\\d\\d-\\d\\d'
+    match: '^(\\d\\d\\d\\d-\\d\\d-\\d\\d)[ ]*(# +([0-9\.]*)(.*))?'
     name: 'tks-date-row'
     captures:
       0:
         name: ''
       1:
-        name: 'm2-wr-id'
+        name: 'tks-day-date'
       2:
-        name: 'm2-2'
+        name: 'tks-day-comment'
       3:
-        name: 'm2-3'
+        name: 'tks-day-hours'
       4:
-        name: 'm2-4'
-      5:
-        name: 'm2-5'
-      6:
-        name: 'm2-6'
+        name: 'tks-day-dayname'
   }
   {
     match: '^([0-9]+)([\\W]+)?([0-9\\.]+)?([\\W]+)?(\\w[^#]*)?(#.*)?$'
