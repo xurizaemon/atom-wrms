@@ -3,6 +3,7 @@
   "main": "./lib/atom-wrms",
   "version": "0.0.1",
   "description": "WRMS integration for Atom",
+  "activationHooks": ["atom-wrms:grammar-used"],
   "keywords": [
   ],
   "repository": "https://github.com/xurizaemon/atom-wrms",
