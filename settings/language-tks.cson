@@ -1,0 +1,6 @@
+'.source.tks':
+  'editor':
+    'autoIndentOnPaste': false
+    'softTabs': true
+    'tabLength': 8
+    'commentStart': '# '
